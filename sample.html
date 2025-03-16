@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0" name="viewport">
+</head>
+<body data-status="articles" aria-hidden="false">
+  <h1>MYNT-Processing sample</h1>
+</body>
+</html>
+
+<script type="module">
+import { Processing } from "./processing.js"
+new Processing({
+  // message : "sample-loading",
+  // rate : 0.1,
+})
+
+setTimeout((()=>{
+  new Processing().set_rate(50)
+}), 1000)
+setTimeout((()=>{
+  new Processing().end()
+}), 2000)
+
+function end_process(){
+  alert("finish")
+}
+</script>
