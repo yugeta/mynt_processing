@@ -84,7 +84,7 @@ export class Processing{
   }
 
   update(rate){
-    this.set_rate(rate)
+    requestAnimationFrame(() => {this.set_rate(rate)})
   }
 
   set_rate(rate){
